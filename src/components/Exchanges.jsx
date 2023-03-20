@@ -39,7 +39,6 @@ export default function Exchanges() {
       const { data } = await axios.get(`${server}/exchanges`);
 
       setExchanges(data);
-      console.log(data)
       setLoading(false);
       
     } catch (error) {
