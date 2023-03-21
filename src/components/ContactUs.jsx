@@ -123,7 +123,6 @@ export default function ContactFormWithSocialButtons() {
                 bg={useColorModeValue('white', 'gray.700')}
                 borderRadius="lg"
                 p={8}
-                width={"40rem"}
                 color={useColorModeValue('gray.700', 'whiteAlpha.900')}
                 shadow="base">
                 <VStack spacing={5}>
