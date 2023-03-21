@@ -19,6 +19,10 @@ export default function Header() {
         <Link to="/coins">Coins</Link>
        </Button>
 
+       <Button variant={"unstyled"} color={"white"}>
+        <Link to="/ContactUs">ContactUs</Link>
+       </Button>
+
      </HStack>
     </div>
   )
