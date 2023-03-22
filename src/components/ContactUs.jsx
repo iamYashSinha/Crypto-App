@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import styled from "styled-components";
 import { Avatar, Box, Flex, keyframes } from '@chakra-ui/react';
 
 
-// npm i @emailjs/browser
+const ContactUs = () => {
 
-const Contact = () => {
+  const avatarSrc = "https://avatars.githubusercontent.com/u/71075101";
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -65,7 +65,7 @@ const Contact = () => {
           animation: `2.25s ${pulseRing} cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite`,
         }}>
         <Avatar
-          src="https://i.pravatar.cc/300"
+          src={avatarSrc}
           size="full"
           position="absolute"
           top={0}
@@ -73,7 +73,61 @@ const Contact = () => {
       </Box>
     </Flex>
     
-    <StyledContactForm>
+
+
+    <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Silicon Valley</div>
+          <div class="text-two">San Francisco</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+0012 3456 7890</div>
+          <div class="text-two">+7890 3456 0012</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">sinhyash986@gmail.com</div>
+          <div class="text-two">info.dummy@gmail.com</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+        <p>If you have any work from me or any types of quries related to my site, you can send me message from here. It's my pleasure to help you.</p>
+      <form ref={form} onSubmit={sendEmail}>
+        <div class="input-box">
+          <input type="text" placeholder="Enter your name" name="user_name"/>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Enter your email" name="user_email"/>
+        </div>
+        <div class="input-box message-box" >
+        <input type="text" placeholder="Message" name="message"/>
+
+        </div>
+        <div class="button">
+          <input type="submit" value="Send Now" />
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+{/*     
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" />
@@ -83,62 +137,9 @@ const Contact = () => {
         <textarea name="message" />
         <input type="submit" value="Send" />
       </form>
-    </StyledContactForm>
+   */}
     </>
   );
 };
 
-export default Contact;
-
-// Styles
-const StyledContactForm = styled.div`
-  width: 400px;
-  form {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-    font-size: 16px;
-
-    input {
-      width: 100%;
-      height: 35px;
-      padding: 7px;
-      outline: none;
-      border-radius: 5px;
-      border: 1px solid rgb(220, 220, 220);
-
-      &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
-      }
-    }
-
-    textarea {
-      max-width: 100%;
-      min-width: 100%;
-      width: 100%;
-      max-height: 100px;
-      min-height: 100px;
-      padding: 7px;
-      outline: none;
-      border-radius: 5px;
-      border: 1px solid rgb(220, 220, 220);
-
-      &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
-      }
-    }
-
-    label {
-      margin-top: 1rem;
-    }
-
-    input[type="submit"] {
-      margin-top: 2rem;
-      cursor: pointer;
-      background: rgb(249, 105, 14);
-      color: white;
-      border: none;
-    }
-  }
-`;
+export default ContactUs;
