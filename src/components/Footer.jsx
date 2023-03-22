@@ -4,6 +4,7 @@ export default function Footer() {
    
     const avatarSrc = "https://avatars.githubusercontent.com/u/71075101";
     const userName = "Yash Sinha";
+    const profileUrl = "https://github.com/IamYashSinha";
 
   return (
     <Box
@@ -14,7 +15,7 @@ export default function Footer() {
     py={["16", "8"]}
   >
     <Stack direction={["column", "row"]} h={"full"} alignItems={"center"}>
-      <VStack w={"full"} alignItems={["center", "flex-start"]}>
+      <VStack w={"full"} alignItems={["center", "flex-start"]} position={"sticky"}>
         <Text fontWeight={"bold"}>About Us</Text>
         <Text
           fontSize={"sm"}
@@ -27,8 +28,8 @@ export default function Footer() {
       </VStack>
 
       <VStack>
-        <Avatar boxSize={"28"} mt={["4", "0"]} src={avatarSrc} />
-        <Text>{userName}</Text>
+       <a href={profileUrl} target='blank'> <Avatar boxSize={"28"} mt={["4", "0"]} src={avatarSrc} /> </a> 
+        <a href={profileUrl} target='blank'><Text>{userName}</Text></a>
       </VStack>
     </Stack>
   </Box>
