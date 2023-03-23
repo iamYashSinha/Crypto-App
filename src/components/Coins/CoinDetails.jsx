@@ -1,11 +1,11 @@
 import { Box, Container, HStack, Radio, RadioGroup, VStack, Text, Image, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, Badge, Progress} from '@chakra-ui/react'
 import React, {useEffect, useState} from 'react'
-import { server } from "../index";
-import Loader from './Loader';
+import { server } from "../../index";
+import Loader from '../Loader';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import ErrorComponent from './ErrorComponent';
-import Chart from './Chart';
+import ErrorComponent from '../Error/ErrorComponent';
+import Chart from '../Charts/Chart';
 
 export default function CoinDetails() {
     
@@ -20,6 +20,7 @@ export default function CoinDetails() {
 
   const params = useParams()
 
+  
   useEffect(() => {
     const fetchCoin = async () => {
       try {
@@ -27,6 +28,7 @@ export default function CoinDetails() {
         
         const {data:chartData} = await axios.get(`${server}/coins/${params.id}/market_chart?vs_currency=${currency}&days=${days}`);
         
+        console.log(data)
         setCoin(data);
         setChartArray(chartData.prices);
 
@@ -49,9 +51,6 @@ export default function CoinDetails() {
          <Box width={"full"} borderWidth={1}> 
           <Chart arr={chartArray}  currency={currencySymbol} days={days}/>
          </Box>
-
-          {/*Button */}
-
 
          <RadioGroup value={currency} onChange={setCurrency} p={8}>
           <HStack spacing={"4"}>

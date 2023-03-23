@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { server } from "../index";
+import { server } from "../../index";
 import { Container, HStack, Button } from "@chakra-ui/react";
-import Loader from "./Loader";
+import Loader from "../Loader";
 import ExchangeCard from "./ExchangeCard";
-import ErrorComponent from "./ErrorComponent";
-import SearchBar from "./SearchBar";
+import ErrorComponent from "../Error/ErrorComponent";
+import SearchBar from "../SearchBar";
 export default function Exchanges() {
   const [exchanges, setExchanges] = useState([]);
   const [loading, setLoading] = useState(true);

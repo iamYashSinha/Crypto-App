@@ -5,10 +5,11 @@ const SearchBar = ({keyword, onChange, placeholder}) => {
   width:"20rem", 
   margin: "20px" ,
   padding:"0.5rem", 
-  border: "2px solid #f1f1f1", 
+  border: "2px solid #ffcf77", 
   borderRadius: "10px",
-  justifyContent: "flex-end"
+  justifyContent: "flex-end",
 };
+
   return (
     <input 
      style={BarStyle}

@@ -15,7 +15,7 @@ ChartJS.register(
 
 export default function Chart({arr=[], currency, days}) {
 
-    const prices = []
+    const prices = [];
 
     const date = [];
 

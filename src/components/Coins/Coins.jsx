@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { server } from "../index";
+import { server } from "../../index";
 import { Button, Container, HStack, Radio, RadioGroup } from "@chakra-ui/react";
-import Loader from "./Loader";
+import Loader from "../Loader";
 import CoinsCard from "./CoinsCard";
-import ErrorComponent from "./ErrorComponent";
-import SearchBar from "./SearchBar";
+import ErrorComponent from "../Error/ErrorComponent";
+import SearchBar from "../SearchBar";
 export default function Coins() {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(true);

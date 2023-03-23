@@ -20,7 +20,7 @@ export default function Header() {
        </Button>
 
        <Button variant={"unstyled"} color={"white"}>
-        <Link to="/ContactUs">ContactUs</Link>
+        <Link to="/contactus">ContactUs</Link>
        </Button>
 
      </HStack>

@@ -4,13 +4,11 @@ import React from "react";
 
 import Header from "../src/components/Header"
 import Home from "../src/components/Home"
-import Coins from "../src/components/Coins"
-import Exchanges from "./components/Exchanges"
-import CoinDetails from "../src/components/CoinDetails"
-// import contactUs from "../src/components/ContactUs"
-import ContactUs from "../src/components/ContactUs"
+import Coins from "./components/Coins/Coins"
+import Exchanges from "./components/Exchanges/Exchanges"
+import CoinDetails from "./components/Coins/CoinDetails"
+import ContactUs from "./components/ContactUs/ContactUs"
 import Footer from "./components/Footer";
-
 
 
 function App() {
